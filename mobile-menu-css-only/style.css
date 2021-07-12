@@ -6,11 +6,11 @@ label:hover {
   cursor: pointer;
 }
 
-div {
+.links {
   display: none;
 }
 
-input:checked ~ div {
+input:checked ~ .links {
   display: block;
 }
 
