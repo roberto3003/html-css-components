@@ -1,0 +1,19 @@
+a {
+  display: block;
+}
+
+label:hover {
+  cursor: pointer;
+}
+
+div {
+  display: none;
+}
+
+input:checked ~ div {
+  display: block;
+}
+
+input {
+  display: none;
+}
