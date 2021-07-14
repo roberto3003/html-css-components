@@ -83,13 +83,11 @@ label:hover {
   font-size: 2em;
   display: none;
   position: absolute;
-  background-color: var(--bg-color);
   line-height: 2;
   padding: var(--padding);
-  opacity: 0.95;
 }
 
-label input:checked ~ .m-links {
+label input:checked ~ * {
   display: block;
 }
 
@@ -99,6 +97,17 @@ label input:checked ~ .m-links {
 }
 
 label input {
+  display: none;
+}
+
+.bg-mobile {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: 0.97;
+  background-color: var(--bg-color);
   display: none;
 }
 
@@ -124,17 +133,16 @@ label input {
 }
 
 .frame {
+  margin-inline-start: auto;
 display: none;
 height: 6em;
 aspect-ratio: 1/1;
 border: 1px solid currentcolor;
 }
 
-
-label input:checked ~ .frame {
-  display: block;
+label input:checked ~ .hamburger {
+  display: none;
 }
-
 
 
 .crossbars {
