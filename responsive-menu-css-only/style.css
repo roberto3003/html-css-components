@@ -105,7 +105,7 @@ label input {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  height: 2em;
+  height: 6em;
   aspect-ratio: 1/1;
   border: 1px solid currentcolor;
 }
@@ -121,9 +121,9 @@ label input {
 }
 
 .frame {
-height: 20vw;
+height: 6em;
 aspect-ratio: 1/1;
-border: 1px solid current color;
+border: 1px solid currentcolor;
 }
 
 .crossbars {
