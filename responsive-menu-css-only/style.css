@@ -57,7 +57,6 @@ p {
   max-width: 60em;
 }
 
-/*
 nav {
   width: 95%;
 }
@@ -67,7 +66,6 @@ nav .flex {
   justify-content: flex-end;
   gap: 1em;
 }
-*/
 
 label {
   display: flex;
@@ -77,7 +75,7 @@ label:hover {
   cursor: pointer;
 }
 
-.m-links {
+.m-anchors {
   right: 0;
   top: 4em;
   font-size: 2em;
@@ -92,7 +90,7 @@ label input:checked ~ * {
 }
 
 
-.m-links a {
+.m-anchors a {
   display: block;
 }
 
