@@ -61,7 +61,7 @@ nav {
   width: 95%;
 }
 
-nav .flex {
+.main-nav {
   align-items: center;
   justify-content: flex-end;
   gap: 1em;
