@@ -52,13 +52,38 @@ body {
   letter-spacing: var(--letter-spacing);
 } 
 
-
-p {
-  line-height: 1.5;
-  max-width: 60em;
+.wrapper {
+  min-height: 100vh;
 }
 
-nav {
+.flex {
+  display: flex;
+  gap: var(--gap);
+  flex-wrap: wrap;
+}
+
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration:none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+
+
+
+
+/* ************************************************************************* */
+
+.main-nav {
   width: 95%;
 }
 
@@ -140,10 +165,6 @@ label input {
   height: 15%;
 }
 
-:root {
-  --bar-width: 20%;
-}
-
 .frame {
   margin-inline-start: auto;
   display: none;
@@ -183,10 +204,6 @@ label input:checked ~ .hamburger {
 
 }
 
-input {
-  font: inherit;
-}
-
 
 header {
   background-image: url('./images/desktop/image-header.jpg');
@@ -211,70 +228,6 @@ header {
   margin-inline-end: auto;
 }
 
-.wrapper {
-  min-height: 100vh;
-}
-
-
-
-.flex {
-  display: flex;
-  gap: var(--gap);
-  flex-wrap: wrap;
-}
-
-.two > *, .three > *{
-  flex-grow: 1;
-  flex-basis: calc(( 16em - 35%) * 999);
-}
-
-.two > :nth-last-child(n+ 3),
-.two > :nth-last-child(n+ 3) ~ * {
-  flex-basis: 100%;
-}
-
-.three  > :nth-last-child(n+ 4),
-.three  > :nth-last-child(n+ 4) ~ * {
-  flex-basis: 100%;
-}
-
-.two img {
-  min-width: 240px;
-  max-width: 100%;
-}
-
-
-.center {
-  text-align: center;
-}
-
-.centered {
-  margin-inline-start: auto;
-  margin-inline-end: auto;
-}
-
-
-.grid-center {
-  display: grid;
-  place-items: center;
-}
-
-
-
-.flex-center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-
-a {
-  text-decoration:none;
-}
-
-a:visited {
-  color: inherit;
-}
+/* ************************************************************************* */
 
 
