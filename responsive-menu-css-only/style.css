@@ -1,6 +1,6 @@
 :root {
   --padding: 1em;
-  --gap: 0em;
+  --gap: 1em;
   --font-size: clamp(1rem, 1.25vw, 2.5rem);
   --letter-spacing: 0.3em;
   --nav-icon: 3em;
@@ -81,6 +81,7 @@ nav {
 
 
 .main-nav {
+  margin-block-start: 1em;
   align-items: center;
   justify-content: flex-end;
   gap: 1em;
@@ -90,8 +91,8 @@ label:hover {
 }
 
 .m-links {
-  right: 0;
-  top: 4em;
+  top: 1em;
+  right: 1em;
   font-size: 2em;
   display: none;
   position: absolute;
@@ -114,7 +115,7 @@ label input {
 
 .bg-mobile {
   width: 100vw;
-  height: 100vh;
+  height: 200vh;
   position: absolute;
   right: 0;
   top: 0;
