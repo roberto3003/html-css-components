@@ -85,53 +85,35 @@ a:visited {
 
 .main-nav {
   width: 95%;
+  margin-block-start: var(--padding);
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1em;
 }
 
-.main-nav label {
-  display: flex;
+.logo {
+  margin-inline-end: auto;
+}
+
+.logo .img {
+  height: 1.75em;
+}
+
+.logo .img img {
+  height: 100%;
 }
 
 .main-nav .links {
   display: none;
 }
 
-@media only screen and (min-width: 1115px) {
-  .main-nav  .links {
-	display: flex;
-  }
-  .main-nav label {
-	display: none;
-  }
+.main-nav label {
+  display: flex;
 }
 
 
-.main-nav {
-  margin-block-start: 1em;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 1em;
-}
-label:hover {
+.main-nav label:hover {
   cursor: pointer;
-}
-
-.m-links {
-  top: 1em;
-  right: 1em;
-  font-size: 2em;
-  display: none;
-  position: absolute;
-  line-height: 2;
-  padding: var(--padding);
-}
-
-label input:checked ~ * {
-  display: block;
-}
-
-
-.m-links a {
-  display: block;
 }
 
 label input {
@@ -159,6 +141,15 @@ label input {
   aspect-ratio: 1/1;
 }
 
+
+label input:checked ~ .hamburger {
+  display: none;
+}
+
+label input:checked ~ * {
+  display: block;
+}
+
 .hamburger .bar {
   background-color: currentcolor;
   width: 70%;
@@ -172,11 +163,6 @@ label input {
   aspect-ratio: 1/1;
   border: 1px solid currentcolor;
 }
-
-label input:checked ~ .hamburger {
-  display: none;
-}
-
 
 .crossbars {
   position: relative;
@@ -197,36 +183,33 @@ label input:checked ~ .hamburger {
   transform: rotate(45deg);
 }
 
-
-
 .crossbars > .bar2 {
   transform: rotate(-45deg);
-
 }
 
-
-header {
-  background-image: url('./images/desktop/image-header.jpg');
-  width: 100%;
+.m-links {
+  top: var(--padding);
+  right: var(--padding);
+  font-size: 2em;
+  display: none;
+  position: absolute;
+  line-height: 2;
+  padding: var(--padding);
 }
 
-.logo {
-  margin-inline-end: auto;
+.m-links a {
+  display: block;
 }
 
-.logo .img {
-  height: 1.75em;
+@media only screen and (min-width: 1115px) {
+  .main-nav  .links {
+	display: flex;
+  }
+  .main-nav label {
+	display: none;
+  }
 }
 
-.logo .img img {
-  height: 100%;
-}
-
-
-
-.logo {
-  margin-inline-end: auto;
-}
 
 /* ************************************************************************* */
 
