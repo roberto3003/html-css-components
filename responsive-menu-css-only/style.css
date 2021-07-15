@@ -75,7 +75,7 @@ label:hover {
   cursor: pointer;
 }
 
-.m-anchors {
+.m-links {
   right: 0;
   top: 4em;
   font-size: 2em;
@@ -90,7 +90,7 @@ label input:checked ~ * {
 }
 
 
-.m-anchors a {
+.m-links a {
   display: block;
 }
 
