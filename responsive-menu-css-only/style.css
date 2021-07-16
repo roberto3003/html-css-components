@@ -52,6 +52,15 @@ body {
   letter-spacing: var(--letter-spacing);
 } 
 
+a {
+  text-decoration:none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+
 .wrapper {
   min-height: 100vh;
 }
@@ -69,19 +78,39 @@ body {
   align-items: center;
 }
 
-a {
-  text-decoration:none;
+.grid-center {
+  display: grid;
+  place-items: center;
 }
-
-a:visited {
-  color: inherit;
-}
-
 
 
 
 
 /* ************************************************************************* */
+
+
+header {
+  background-image: url('./images/desktop/image-header.jpg');
+  width: 100%;
+}
+
+
+.bg-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  min-height: 50vh;
+}
+
+.hero {
+  min-width: 300px;
+}
+
+
+.nav-wrapper {
+  width: 100%;
+}
+
 
 .main-nav {
   width: 95%;
@@ -120,16 +149,29 @@ label input {
   display: none;
 }
 
-.bg-mobile {
-  width: 100vw;
-  height: 200vh;
+.bg-mobile, .bg-m-menu {
   position: absolute;
   right: 0;
   top: 0;
-  opacity: 0.97;
+}
+
+
+.bg-mobile {
+  width: 100vw;
+  height: 200vh;
+  opacity: 0.6;
+  background-color: var(--contrast);
+  display: none;
+}
+
+.bg-m-menu {
+  width: 10em;
+  height: 14em;
+  opacity: 0.95;
   background-color: var(--bg-color);
   display: none;
 }
+
 
 .hamburger {
   margin-inline-start: auto;
@@ -188,9 +230,9 @@ label input:checked ~ * {
 }
 
 .m-links {
-  top: var(--padding);
+  top: calc(var(--padding)*3);
   right: var(--padding);
-  font-size: 2em;
+  font-size: 1em;
   display: none;
   position: absolute;
   line-height: 2;
