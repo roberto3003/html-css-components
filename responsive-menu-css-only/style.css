@@ -150,7 +150,7 @@ label input {
 }
 
 .bg-mobile, .bg-m-menu {
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
 }
@@ -158,7 +158,7 @@ label input {
 
 .bg-mobile {
   width: 100vw;
-  height: 200vh;
+  height: 100vh;
   opacity: 0.6;
   background-color: var(--contrast);
   display: none;
@@ -207,10 +207,12 @@ label input:checked ~ * {
 }
 
 .crossbars {
-  position: relative;
-  height: 100%;
-  width: 100%;
+  position: fixed;
+  height: var(--nav-icon);
+  width: var(--nav-icon);
+  right: var(--padding);
 } 
+ 
 
 .crossbars > .bar {
   background-color: currentcolor;
@@ -234,7 +236,7 @@ label input:checked ~ * {
   right: var(--padding);
   font-size: 1em;
   display: none;
-  position: absolute;
+  position: fixed;
   line-height: 2;
   padding: var(--padding);
 }
