@@ -89,35 +89,14 @@ a:visited {
 /* ************************************************************************* */
 
 
-header {
-  background-image: url('./images/desktop/image-header.jpg');
-  width: 100%;
-}
-
-
-.bg-image {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  min-height: 50vh;
-}
-
-.hero {
-  min-width: 300px;
-}
-
-
 .nav-wrapper {
   width: 100%;
 }
 
-
 .main-nav {
-  width: 95%;
   height: 4em;
+  margin: 0 1em;
   align-items: center;
-  justify-content: flex-end;
-  gap: 1em;
 }
 
 .logo {
@@ -137,105 +116,64 @@ header {
 }
 
 .main-nav .links > * {
+  display: none;
+}
+
+.m-nav {
   position: absolute;
-  left: -999px;
-}
-
-.main-nav .links > *:focus {
-  position: initial;
-}
-
-.main-nav label {
-  display: flex;
-}
-
-
-.main-nav label:hover {
-  cursor: pointer;
-}
-
-label input {
-  display: none;
-}
-
-.bg-mobile, .bg-m-menu {
-  position: fixed;
-  right: 0;
   top: 0;
-}
-
-
-.bg-mobile {
-  width: 100vw;
-  height: 100vh;
-  opacity: 0.6;
-  background-color: var(--contrast);
-  display: none;
-}
-
-.bg-m-menu {
-  width: 10em;
-  height: 14em;
-  opacity: 0.95;
+  right: 0;
+  padding: 0.75em;
   background-color: var(--bg-color);
+}
+
+.m-nav input {
+  display:none;
+}
+
+.m-menu ~ * {
   display: none;
 }
 
-.hamburger {
-  font-size: 2em;
-}
-
-label input:checked ~ .hamburger span {
-  display: none;
-}
-
-label input:checked ~ * {
+.m-menu ~ label {
   display: block;
+  position: relative;
 }
-
-.frame {
-  margin-inline-start: auto;
-  display: none;
-  height: var(--nav-icon);
-  aspect-ratio: 1/1;
-  border: 1px solid currentcolor;
+.hamburger, .crossbars {
+  font-size: var(--nav-icon);
 }
 
 .crossbars {
-  margin-inline-start: auto;
-  display: none;
-  position: fixed;
-  top: var(--padding);
-  right: var(--padding);
+  text-align: right;
 }
 
-.crossbars a {
-  font-size: 2em;
-}
-
-.m-links {
-  top: calc(var(--padding)*3);
-  right: var(--padding);
-  font-size: 1em;
-  display: none;
-  position: fixed;
-  line-height: 2;
-  padding: var(--padding);
-}
-
-.m-links a {
+.m-menu:checked ~ * {
   display: block;
+  position: relative;
+}
+ 
+.m-menu:checked ~ label {
+  display: none;
+}
+ 
+.m-links {
+  list-style-type: none;
+  padding: 0;
+}
+
+.m-links li {
+  line-height: 2;
 }
 
 @media only screen and (min-width: 1115px) {
   .main-nav  .links > * {
-  position: initial;
-  left: auto;
+	display: initial;
   }
-  .main-nav label {
+  .m-nav {
 	display: none;
   }
 }
+
 
 /* ************************************************************************* */
 

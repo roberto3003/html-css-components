@@ -5,52 +5,43 @@
 	<title></title>
 	<link rel="stylesheet" href="style.css" media="all">
   </head>
+
   <body>
-	<div class="wrapper">
 
+	  <div class="nav-wrapper">
+		<div class="main-nav flex">
+		  <div class="logo">
+			<div class="img"><img src="./images/logo.svg" alt=""></div>
+			<!--  <span>LOGO</span> -->
+		  </div>
 
+		  <nav aria-label="main">
+			<ul class="links" role="menubar">
+			  <li role="menuitem"><a href="">Services</a></li>
+			  <li role="menuitem"><a href="">About</a></li>
+			  <li role="menuitem"><a href="">Projects</a></li>
+			  <li role="menuitem"><a href="">Contact</a></li>
+			</ul>
 
-		<div class="nav-wrapper grid-center">
-		  <nav class="main-nav flex">
-			<div class="logo">
-			  <div class="img"><img src="./images/logo.svg" alt=""></div>
-			  <!--  <span>LOGO</span> -->
-			</div>
-			<div class="links flex">
-			  <a href="">Services</a>
-			  <a href="">About</a>
-			  <a href="">Projects</a>
-			  <a href="">Contact</a>
-			</div>
-			<label for="menu" aria-hidden="true">
-			  <input type="checkbox" id="menu">
-			  	<div class="bg-mobile"></div>
-			  <div class="bg-m-menu"></div>
-			  <div class="hamburger">
-				<span>&#9776</span>
-				<!-- 	<span>&#8801</span>  -->
-			  </div>
-				<div class="crossbars">
-				  <a href="">&#0215</a>
-				</div>
-			  <div class="m-links">
-				<a href="">Services</a>
-				<a href="">About</a>
-				<a href="">Projects</a>
-				<a href="">Contact</a>
-			  </div>
-			</label>
 		  </nav>
 		</div>
-		  
 
-	  <header class="bg-image hero">
-		<div class="flex-center">
+		<div class="m-nav">
+		  <input type="checkbox" id="menu" class="m-menu">
+		  <label for="menu" class="hamburger">&#9776;</label>
+		  <div class="bg-nav"></div>
+		  <a href="" class="crossbars">&#0215;</a>
+		  <nav aria-label="main">
+			<ul class="m-links" role="menubar">
+			  <li role="menuitem"><a href="">Services</a></li>
+			  <li role="menuitem"><a href="">About</a></li>
+			  <li role="menuitem"><a href="">Projects</a></li>
+			  <li role="menuitem"><a href="">Contact</a></li>
+			</ul>
+		  </nav>
 		</div>
-	  </header>
 
+	  </div>
 
-
-	</div>
   </body>
 </html>
