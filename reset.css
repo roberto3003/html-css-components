@@ -7,6 +7,8 @@
 
   <body>
 	<a class="skip-main" href="#main">Skip to main content</a>
+
+
 .wrapper.flex-center>.container+footer.footer>.container
 
 
@@ -20,75 +22,50 @@ left: -999px;
 }
 
 
+	  <div class="nav-wrapper">
+		<div class="main-nav flex">
+		  <div class="logo">
+			<div class="img"><img src="./images/logo.svg" alt=""></div>
+			<!--  <span>LOGO</span> -->
+		  </div>
 
-<div class="nav-wrapper grid-center">
-<nav class="main-nav flex">
-<div class="logo">
-<div class="img"><img src="./images/logo.svg" alt=""></div>
-<!--  <span>LOGO</span> -->
-</div>
-<div class="links flex">
-<a href="">Services</a>
-<a href="">About</a>
-<a href="">Projects</a>
-<a href="">Contact</a>
-</div>
-<label for="menu" aria-hidden="true">
-<input type="checkbox" id="menu">
-<div class="bg-mobile"></div>
-<div class="bg-m-menu"></div>
-<div class="hamburger">
-<div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
-</div>
-<div class="frame">
-<div class="crossbars">
-<div class="bar bar1"></div>
-<div class="bar bar2"></div>
-</div>
-</div>
-<div class="m-links">
-<a href="">Services</a>
-<a href="">About</a>
-<a href="">Projects</a>
-<a href="">Contact</a>
-</div>
-</label>
-</nav>
-</div>
+		  <nav aria-label="main">
+			<ul class="links" role="menubar">
+			  <li role="menuitem"><a href="">Services</a></li>
+			  <li role="menuitem"><a href="">About</a></li>
+			  <li role="menuitem"><a href="">Projects</a></li>
+			  <li role="menuitem"><a href="">Contact</a></li>
+			</ul>
 
+		  </nav>
+		</div>
 
+		<div class="m-nav">
+		  <input type="checkbox" id="menu" class="m-menu">
+		  <label for="menu" class="hamburger">&#9776;</label>
+		  <div class="bg-nav"></div>
+		  <a href="" class="crossbars">&#0215;</a>
+		  <nav aria-label="main">
+			<ul class="m-links" role="menubar">
+			  <li role="menuitem"><a href="">Services</a></li>
+			  <li role="menuitem"><a href="">About</a></li>
+			  <li role="menuitem"><a href="">Projects</a></li>
+			  <li role="menuitem"><a href="">Contact</a></li>
+			</ul>
+		  </nav>
+		</div>
 
-header {
-  background-image: url('./images/desktop/image-header.jpg');
-  width: 100%;
-}
-
-
-.bg-image {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  min-height: 50vh;
-}
-
-.hero {
-  min-width: 300px;
-}
+	  </div>
 
 
 .nav-wrapper {
   width: 100%;
 }
 
-
 .main-nav {
-  width: 95%;
-  margin: var(--padding) 0;
+  height: 4em;
+  margin: 0 1em;
   align-items: center;
-  justify-content: flex-end;
-  gap: 1em;
 }
 
 .logo {
@@ -108,132 +85,64 @@ header {
 }
 
 .main-nav .links > * {
+  display: none;
+}
+
+.m-nav {
   position: absolute;
-  left: -999px;
-}
-
-.main-nav .links > *:focus {
-  position: initial;
-}
-
-.main-nav label {
-  display: flex;
-}
-
-
-.main-nav label:hover {
-  cursor: pointer;
-}
-
-label input {
-  display: none;
-}
-
-.bg-mobile, .bg-m-menu {
-  position: fixed;
-  right: 0;
   top: 0;
-}
-
-
-.bg-mobile {
-  width: 100vw;
-  height: 100vh;
-  opacity: 0.6;
-  background-color: var(--contrast);
-  display: none;
-}
-
-.bg-m-menu {
-  width: 10em;
-  height: 14em;
-  opacity: 0.95;
+  right: 0;
+  padding: 0.75em;
   background-color: var(--bg-color);
+}
+
+.m-nav input {
+  display:none;
+}
+
+.m-menu ~ * {
   display: none;
 }
 
-
-.hamburger {
-  margin-inline-start: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  height: var(--nav-icon);
-  aspect-ratio: 1/1;
-}
-
-
-label input:checked ~ .hamburger {
-  display: none;
-}
-
-label input:checked ~ * {
+.m-menu ~ label {
   display: block;
+  position: relative;
 }
-
-.hamburger .bar {
-  background-color: currentcolor;
-  width: 70%;
-  height: 15%;
-}
-
-.frame {
-  margin-inline-start: auto;
-  display: none;
-  height: var(--nav-icon);
-  aspect-ratio: 1/1;
-  border: 1px solid currentcolor;
+.hamburger, .crossbars {
+  font-size: var(--nav-icon);
 }
 
 .crossbars {
-  position: fixed;
-  height: var(--nav-icon);
-  width: var(--nav-icon);
-  right: var(--padding);
-} 
- 
-
-.crossbars > .bar {
-  background-color: currentcolor;
-  height: 90%;
-  width: 20%;
-  position: absolute;
-  right: 40%;
-  top: 8%;
+  text-align: right;
 }
 
-.crossbars > .bar1 {
-  transform: rotate(45deg);
-}
-
-.crossbars > .bar2 {
-  transform: rotate(-45deg);
-}
-
-.m-links {
-  top: calc(var(--padding)*3);
-  right: var(--padding);
-  font-size: 1em;
-  display: none;
-  position: fixed;
-  line-height: 2;
-  padding: var(--padding);
-}
-
-.m-links a {
+.m-menu:checked ~ * {
   display: block;
+  position: relative;
+}
+ 
+.m-menu:checked ~ label {
+  display: none;
+}
+ 
+.m-links {
+  list-style-type: none;
+  padding: 0;
+}
+
+.m-links li {
+  line-height: 2;
 }
 
 @media only screen and (min-width: 1115px) {
   .main-nav  .links > * {
-  position: initial;
-  left: auto;
+	display: initial;
   }
-  .main-nav label {
+  .m-nav {
 	display: none;
   }
 }
+
 
 
 
