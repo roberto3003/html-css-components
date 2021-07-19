@@ -45,7 +45,7 @@ left: -999px;
 		  <input type="checkbox" id="menu" class="m-menu">
 		  <label for="menu" class="hamburger">&#9776;</label>
 		  <div class="bg-nav"></div>
-		  <a href="" class="crossbars">&#0215;</a>
+		  <a href="" class="cross-mark">&#0215;</a>
 		  <nav aria-label="main">
 			<ul class="m-links" role="menubar">
 			  <li role="menuitem"><a href="">Services</a></li>
@@ -109,11 +109,11 @@ left: -999px;
   display: block;
   position: relative;
 }
-.hamburger, .crossbars {
+.hamburger, .cross-mark {
   font-size: var(--nav-icon);
 }
 
-.crossbars {
+.cross-mark {
   text-align: right;
 }
 
