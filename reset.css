@@ -8,9 +8,9 @@
   <body>
 	<a class="skip-main" href="#main">Skip to main content</a>
 
-<p id="main" tabindex="-1">Main Content</p>
+<!-- <p id="main" tabindex="-1">Main Content</p> -->
 
-.wrapper.flex-center>.container+footer.footer>.container
+.wrapper.flex-center>.container>main+footer.footer>.container
 
 
 .skip-main {
@@ -21,132 +21,6 @@ left: -999px;
 .skip-main:focus {
   left: 1em;
 }
-
-
-	  <div class="nav-wrapper">
-		<div class="main-nav flex">
-		  <div class="logo">
-			<div class="img"><img src="./images/logo.svg" alt=""></div>
-			<!--  <span>LOGO</span> -->
-		  </div>
-
-		  <nav aria-label="main">
-			<ul class="links" role="menubar">
-			  <li role="menuitem"><a href="">Services</a></li>
-			  <li role="menuitem"><a href="">About</a></li>
-			  <li role="menuitem"><a href="">Projects</a></li>
-			  <li role="menuitem"><a href="">Contact</a></li>
-			</ul>
-
-		  </nav>
-		</div>
-
-		<div class="m-nav">
-		  <input type="checkbox" id="menu" class="m-menu">
-		  <label for="menu" class="hamburger">&#9776;</label>
-		  <div class="bg-nav"></div>
-		  <a href="" class="cross-mark">&#0215;</a>
-		  <nav aria-label="main">
-			<ul class="m-links" role="menubar">
-			  <li role="menuitem"><a href="">Services</a></li>
-			  <li role="menuitem"><a href="">About</a></li>
-			  <li role="menuitem"><a href="">Projects</a></li>
-			  <li role="menuitem"><a href="">Contact</a></li>
-			</ul>
-		  </nav>
-		</div>
-
-	  </div>
-
-
-.nav-wrapper {
-  width: 100%;
-}
-
-.main-nav {
-  height: 4em;
-  margin: 0 1em;
-  align-items: center;
-}
-
-.logo {
-  margin-inline-end: auto;
-}
-
-.logo .img {
-  height: 1.75em;
-}
-
-.logo .img img {
-  height: 100%;
-}
-
-.main-nav .links {
-  gap: 1em;
-}
-
-.main-nav .links > * {
-  display: none;
-}
-
-.m-nav {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 0.75em;
-  background-color: var(--bg-color);
-}
-
-.m-nav input {
-  display:none;
-}
-
-.m-menu ~ * {
-  display: none;
-}
-
-.m-menu ~ label {
-  display: block;
-  position: relative;
-}
-.hamburger, .cross-mark {
-  font-size: var(--nav-icon);
-}
-
-.cross-mark {
-  text-align: right;
-}
-
-.m-menu:checked ~ * {
-  display: block;
-  position: relative;
-}
- 
-.m-menu:checked ~ label {
-  display: none;
-}
- 
-.m-links {
-  list-style-type: none;
-  padding: 0;
-}
-
-.m-links li {
-  line-height: 2;
-}
-
-@media only screen and (min-width: 1115px) {
-  .main-nav  .links > * {
-	display: initial;
-  }
-  .m-nav {
-	display: none;
-  }
-}
-
-
-
-
 
 
 <article>
@@ -189,7 +63,7 @@ left: -999px;
 }
 
 :root {
-  --padding: 1em;
+  --padding: 1.5em;
   --gap: 4em;
   --font-size: clamp(1rem, 1.25vw, 2.5rem);
   --letter-spacing: 0.3em;
@@ -323,6 +197,10 @@ picture {
   display: flex;
   gap: var(--gap);
   flex-wrap: wrap;
+}
+
+.column {
+  flex-direction: column;
 }
 
 .two > *, .three > *{
