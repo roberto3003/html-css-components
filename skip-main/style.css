@@ -1,8 +1,4 @@
 :root {
-  --line-h: 1.5em;
-  --padding: 1.5em;
-  --gap: calc(var(--line-h)*2);
-  --radius: 1rem;
   --font-size: clamp(0.8rem, 1.25vw, 2.5rem);
   --letter-spacing: 0.25em;
 }
@@ -10,18 +6,8 @@
 
 /* light-theme colors */
 :root {
-  --bg-color: whitesmoke;
   --text: rgba(46, 49, 49, 1);
-  --text-70: rgba(46, 49, 49, 0.7);
-  --text-contrast: var(--white);
-  --theme: mistyrose;
-  --medium: lavender;
-  --contrast: lightsteelblue;
-  --accent: orangered;
-  --white: white;
-  --black: rgba(46, 49, 49, 1);
   --shadow: 0 0.25vw 1vw  0 rgba(0,0,0,0.2);
-  --shadow-deep: 0 0.5vw 2vw  0 rgba(0,0,0,0.2);
 }
 
 
@@ -31,6 +17,7 @@
   *::after {
 	box-sizing: border-box;
   }
+
   body {
 	min-height: 100vh;
 	margin:0;
@@ -48,26 +35,26 @@
 	box-shadow: var(--shadow);
   }
 
-body > * {
-  width: 100%;
-}
+  body > * {
+	width: 100%;
+  }
 
 
-a {
-  text-decoration:none;
-}
+  a {
+	text-decoration:none;
+  }
 
-a:visited, a:active {
-  color: inherit;
-}
+  a:visited, a:active {
+	color: inherit;
+  }
 
-.skip-main {
-  position: absolute;
-  top: 0;
-  right: 100%;
-}
+  .skip-main {
+	position: absolute;
+	top: 0;
+	right: 100%;
+  }
 
-.skip-main:focus {
-  right: auto;
-}
+  .skip-main:focus {
+	right: auto;
+  }
 
