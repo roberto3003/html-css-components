@@ -1,0 +1,277 @@
+:root {
+  --line-h: 1.5em;
+  --padding: 1.5em;
+  --gap: calc(var(--line-h)*2);
+  --radius: 1rem;
+  --font-size: clamp(0.8rem, 1.25vw, 2.5rem);
+  --letter-spacing: 0.25em;
+}
+
+/* dark-theme colors */
+:root {
+  --bg-color: midnightblue;
+  --text:rgba(255, 255, 255, 1);
+  --text-70:rgba(255, 255, 255, 0.7);
+  --text-contrast: var(--black);
+  --theme: lightsteelblue;
+  --contrast: rebeccapurple;
+  --medium: indigo;
+  --accent: coral;
+  --white: white;
+  --black: rgba(46, 49, 49, 1);
+  --shadow: unset;
+  --shadow-deep: unset;
+}
+
+
+/* light-theme colors */
+:root {
+  --bg-color: whitesmoke;
+  --text: rgba(46, 49, 49, 1);
+  --text-70: rgba(46, 49, 49, 0.7);
+  --text-contrast: var(--white);
+  --theme: mistyrose;
+  --medium: lavender;
+  --contrast: lightsteelblue;
+  --accent: orangered;
+  --white: white;
+  --black: rgba(46, 49, 49, 1);
+  --shadow: 0 0.25vw 1vw  0 rgba(0,0,0,0.2);
+  --shadow-deep: 0 0.5vw 2vw  0 rgba(0,0,0,0.2);
+}
+
+
+/* Box sizing rules */
+*,
+  *::before,
+  *::after {
+	box-sizing: border-box;
+  }
+
+  /* Remove default margin */
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd {
+	margin: 0;
+	line-height: var(--line-h);
+  }
+
+  /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+  ul[role='list'],
+  ol[role='list'] {
+	list-style: none;
+  }
+
+  /* Set core root defaults */
+  html:focus-within {
+	scroll-behavior: smooth;
+  }
+
+
+  html {
+	background-color: var(--bg-color);
+  }
+
+  body {
+	min-height: 100vh;
+	margin:0;
+	color: var(--text);
+	font-family: system-ui, sans-serif;
+	font-size: var(--font-size);
+	letter-spacing: var(--letter-spacing);
+  } 
+
+  main * + * {
+	margin-block-start: var(--line-h);
+  }
+  li, dt, dd, br, th, td {
+	margin-block-start: 0;
+  }
+
+* + h2, * + h3, * + h4 {
+  margin-block-start: var(--line-h);
+}
+
+main * + *:not(p) {
+  margin-block-start: calc(var(--line-h)*2);
+}
+
+main, .footer {
+  margin-block-start: calc(var(--line-h)*4);
+}
+
+
+body > * {
+  width: 100%;
+}
+
+
+p {
+  max-width: 60em;
+  margin: var(--line-h) 0;
+  word-spacing: var(--letter-spacing);
+}
+
+a {
+  text-decoration:none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+
+p a {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-thickness: from-font;
+  cursor: pointer;
+}
+
+p a:visited {
+  color: var(--text-70);
+}
+
+p a:hover {
+  text-decoration: underline;
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: initial;
+}
+
+header {
+  background-color: var(--theme);
+  min-height: calc(var(--line-h)*3);
+}
+
+nav {
+  justify-content: flex-end;
+}
+
+ul {
+  padding: 0;
+}
+
+nav li {
+  display: grid;
+  place-items: center;
+  padding: 0.5em;
+}
+
+nav li:not(.logo, .button, .active):hover, .active {
+  border-block-end: solid var(--accent);
+}
+
+.active {
+  font-size: 1.1em;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: 80vw; 
+  min-width: 320px;
+  margin: 0 auto;
+}
+
+.main-nav {
+  min-height: calc(var(--line-h)*2);
+  align-items: center;
+  gap: 0;
+}
+
+.logo .img {
+  height: var(--line-h);
+}
+
+.logo .img img {
+  height: 100%;
+}
+
+.main-nav .links {
+  gap: 1em;
+  justify-content: flex-end;
+}
+
+@media only screen and (max-width: 25em) {
+  .main-nav  .links  {
+	flex-direction: column;
+	align-items: center;
+  }
+
+  .logo {
+	margin-inline: auto;
+  }
+}
+
+.main-nav .links > *:not(.logo) {
+  display: initial;
+}
+
+.logo {
+  margin-inline-end: auto;
+}
+
+
+.flex {
+  display: flex;
+  gap: var(--gap);
+  flex-wrap: wrap;
+}
+
+.center {
+  text-align: center;
+}
+
+.centered {
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+}
+
+.gc {
+  display: grid;
+  place-items: center;
+}
+
+.gac {
+  display: grid;
+  align-items: center;
+}
+
+.gjc {
+  display: grid;
+  justify-items: center;
+}
+
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.radius {
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.shadow {
+  box-shadow: var(--shadow);
+}
+
+.shadow:hover {
+  box-shadow: var(--shadow-deep);
+}
+
+
