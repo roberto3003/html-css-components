@@ -22,46 +22,6 @@ left: -999px;
   left: 1em;
 }
 
-
-<article>
-<div class="testimonial">
-<q>Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</q>
-<footer>
-<div class="testimonial-img">
-<img src="./images/avatar-testimonial.jpg" alt="">
-</div>
-<p><b>Kyle Burton</b><br> Founder & CEO, Huddle</p>
-</footer>
-</div>
-</article>
-
-.testimonials article {
-  background-color: var(--medium);
-}
-
-.testimonial {
-  padding: 1em;
-}
-
-.testimonial-img {
-  height: 3em;
-  width: 3em;
-  margin-inline-end: 1em;
-}
-
-.testimonial-img img {
-  min-width: initial;
-  height: 100%;
-  width: auto;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.testimonial footer {
-  display:flex;
-  align-items: center;
-}
-
 :root {
   --padding: 1.5em;
   --gap: 4em;
@@ -223,10 +183,6 @@ picture {
   max-width: 100%;
 }
 
-.gap-min {
-  gap: 1em;
-}
-
 .row-reverse {
   flex-direction: row-reverse;
 }
@@ -243,14 +199,6 @@ picture {
   margin-inline-start: auto;
   margin-inline-end: auto;
 }
-
-
-.grid-center {
-  display: grid;
-  place-items: center;
-}
-
-
 
 .flex-center {
   display: flex;
@@ -313,15 +261,6 @@ a:visited {
   box-shadow: var(--shadow-deep);
 }
 
-.img-small {
-  height: 3em;
-}
-
-.img-small img {
-  height: 100%;
-  width: auto;
-}
-
 .footer {
   background-color: var(--contrast);
   align-items: start;
@@ -362,25 +301,6 @@ https://piccalil.li/blog/a-modern-css-reset
 	scroll-behavior: smooth;
   }
 
-  :root {
-	--html-color: gainsboro;
-	--main-bg-color: slategrey;
-	--text-dark: darkslategrey;
-	--text-light: white;
-	--dark: darkslateblue;
-	--neutral: steelblue;
-	--light: cornflowerblue;
-	--accent: gold;
-	--grey: hsl(227, 10%, 46%);
-	--darkest-grey: #2e3131;
-	--mbe: 2rem;
-	--padding: 1rem;
-	--gap: 2em;
-	--shadow: 0 0.25vw 1vw  0 rgba(0,0,0,0.5);
-	--shadow-deep: 0 0.5vw 2vw  0 rgba(0,0,0,0.5);
-	--radius: 1em;
-	--bg-image: linear-gradient(179deg, violet 0%, #073AFFFF 100%),radial-gradient(75% 75% at 50% 50%, royalblue 0%, #073AFFFF 100%);
-  }
 
   /* Inherit fonts for inputs and buttons */
   input,
@@ -490,10 +410,6 @@ https://piccalil.li/blog/a-modern-css-reset
 
   .padding {
 	padding: var(--padding);
-  }
-
-  .mbe {
-	margin-block-end: var(--mbe);
   }
 
   .gap {
