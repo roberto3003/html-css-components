@@ -1,43 +1,15 @@
 :root {
   --line-h: 1.5em;
-  --padding: 1.5em;
   --gap: calc(var(--line-h)*2);
-  --radius: 1rem;
   --font-size: clamp(0.8rem, 1.25vw, 2.5rem);
   --letter-spacing: 0.25em;
 }
 
-/* dark-theme colors */
-:root {
-  --bg-color: midnightblue;
-  --text:rgba(255, 255, 255, 1);
-  --text-70:rgba(255, 255, 255, 0.7);
-  --text-contrast: var(--black);
-  --theme: lightsteelblue;
-  --contrast: rebeccapurple;
-  --medium: indigo;
-  --accent: coral;
-  --white: white;
-  --black: rgba(46, 49, 49, 1);
-  --shadow: unset;
-  --shadow-deep: unset;
-}
-
-
-/* light-theme colors */
 :root {
   --bg-color: whitesmoke;
   --text: rgba(46, 49, 49, 1);
-  --text-70: rgba(46, 49, 49, 0.7);
-  --text-contrast: var(--white);
   --theme: mistyrose;
-  --medium: lavender;
-  --contrast: lightsteelblue;
   --accent: orangered;
-  --white: white;
-  --black: rgba(46, 49, 49, 1);
-  --shadow: 0 0.25vw 1vw  0 rgba(0,0,0,0.2);
-  --shadow-deep: 0 0.5vw 2vw  0 rgba(0,0,0,0.2);
 }
 
 
@@ -49,23 +21,13 @@
   }
 
   /* Remove default margin */
-  body,
-  h1,
-  h2,
-  h3,
-  h4,
-  p,
-  figure,
-  blockquote,
-  dl,
-  dd {
+  body {
 	margin: 0;
 	line-height: var(--line-h);
   }
 
   /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-  ul[role='list'],
-  ol[role='list'] {
+  ul[role='list'] {
 	list-style: none;
   }
 
@@ -73,7 +35,6 @@
   html:focus-within {
 	scroll-behavior: smooth;
   }
-
 
   html {
 	background-color: var(--bg-color);
@@ -88,36 +49,10 @@
 	letter-spacing: var(--letter-spacing);
   } 
 
-  main * + * {
-	margin-block-start: var(--line-h);
-  }
-  li, dt, dd, br, th, td {
-	margin-block-start: 0;
-  }
-
-* + h2, * + h3, * + h4 {
-  margin-block-start: var(--line-h);
-}
-
-main * + *:not(p) {
-  margin-block-start: calc(var(--line-h)*2);
-}
-
-main, .footer {
-  margin-block-start: calc(var(--line-h)*4);
-}
-
-
 body > * {
   width: 100%;
 }
 
-
-p {
-  max-width: 60em;
-  margin: var(--line-h) 0;
-  word-spacing: var(--letter-spacing);
-}
 
 a {
   text-decoration:none;
@@ -127,24 +62,6 @@ a:visited {
   color: inherit;
 }
 
-
-p a {
-  color: var(--text);
-  text-decoration: underline;
-  text-decoration-thickness: from-font;
-  cursor: pointer;
-}
-
-p a:visited {
-  color: var(--text-70);
-}
-
-p a:hover {
-  text-decoration: underline;
-  color: var(--accent);
-  text-decoration-color: var(--accent);
-  text-decoration-thickness: initial;
-}
 
 header {
   background-color: var(--theme);
@@ -158,6 +75,10 @@ nav {
 ul {
   padding: 0;
 }
+
+  li {
+	margin-block-start: 0;
+  }
 
 nav li {
   display: grid;
@@ -191,6 +112,11 @@ picture {
   gap: 0;
 }
 
+.logo {
+  margin-inline-end: auto;
+}
+
+
 .logo .img {
   height: var(--line-h);
 }
@@ -219,24 +145,11 @@ picture {
   display: initial;
 }
 
-.logo {
-  margin-inline-end: auto;
-}
-
 
 .flex {
   display: flex;
   gap: var(--gap);
   flex-wrap: wrap;
-}
-
-.center {
-  text-align: center;
-}
-
-.centered {
-  margin-inline-start: auto;
-  margin-inline-end: auto;
 }
 
 .gc {
@@ -248,30 +161,3 @@ picture {
   display: grid;
   align-items: center;
 }
-
-.gjc {
-  display: grid;
-  justify-items: center;
-}
-
-.flex-center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.radius {
-  border-radius: var(--radius);
-  overflow: hidden;
-}
-
-.shadow {
-  box-shadow: var(--shadow);
-}
-
-.shadow:hover {
-  box-shadow: var(--shadow-deep);
-}
-
-
