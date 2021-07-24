@@ -37,6 +37,7 @@
 
 </body>
 
+
 :root {
   --line-h: 1.5em;
   --padding: 1.5em;
@@ -116,6 +117,11 @@
 	list-style: none;
   }
 
+  /* A elements that don't have a class get default styles */
+  a:not([class]) {
+	text-decoration-skip-ink: auto;
+  }
+
   /* Inherit fonts for inputs and buttons */
   input,
   button,
@@ -140,29 +146,29 @@
 		   }
 		 }
 
-/* Prepare document for printing */
-  @media print {
-	body > *:not(main), .button {
-	  display: none;
-	}
-  }
+		 /* Prepare document for printing */
+		 @media print {
+		   body > *:not(main), .button {
+			 display: none;
+		   }
+		 }
 
-/* Make links accesible */
-  :focus {
-	outline: 0.12em solid currentColor;
-	padding: 0.2em;
-	font-size: 1.1em;
-	text-decoration: none;
-	box-shadow: var(--shadow);
-  }
+		 /* Make links accesible */
+		 :focus {
+		   outline: 0.12em solid currentColor;
+		   padding: 0.2em;
+		   font-size: 1.1em;
+		   text-decoration: none;
+		   box-shadow: var(--shadow);
+		 }
 
-/* Vertical rhythm */
-  main * + * {
-	margin-block-start: var(--line-h);
-  }
-  li, dt, dd, br, th, td {
-	margin-block-start: 0;
-  }
+		 /* Vertical rhythm */
+		 main * + * {
+		   margin-block-start: var(--line-h);
+		 }
+		 li, dt, dd, br, th, td {
+		   margin-block-start: 0;
+		 }
 
 * + h2, * + h3, * + h4 {
   margin-block-start: var(--line-h);
@@ -182,31 +188,31 @@ section, .section  {
 
 
 
-  /* Make images easier to work with */
-  img,
-  picture {
-	max-width: 100%;
-	display: block;
-  }
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
 
 /* Set core root defaults */
-  html:focus-within {
-	scroll-behavior: smooth;
-  }
+html:focus-within {
+  scroll-behavior: smooth;
+}
 
 html {
   background-color: var(--bg-color);
 }
 
 
-  body {
-	min-height: 100vh;
-	margin:0;
-	color: var(--text);
-	font-family: system-ui, sans-serif;
-	font-size: var(--font-size);
-	letter-spacing: var(--letter-spacing);
-  } 
+body {
+  min-height: 100vh;
+  margin:0;
+  color: var(--text);
+  font-family: system-ui, sans-serif;
+  font-size: var(--font-size);
+  letter-spacing: var(--letter-spacing);
+} 
 
 body > * {
   width: 100%;
@@ -360,13 +366,13 @@ hr {
 
 
 .hero {
-	background-image: url('./images/hero-desktop.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	min-height:33vh;
-	min-width: 300px;
-  }
+  background-image: url('./images/hero-desktop.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  min-height:33vh;
+  min-width: 300px;
+}
 
 /* Grid */
 .grid {
@@ -454,22 +460,7 @@ center {
 
 
 
-
-
-
-
-***************************************************************************
-***************************************************************************
-
-
-.bg-image {
-  background-image: url();
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  min-height: 33vh;
-}
-
+/* Buttons and CTA */
 .button {
   border-radius: var(--padding);
   border: 0.1em  solid var(--text);
@@ -497,9 +488,19 @@ center {
   color: var(--text-contrast);
 }
 
-.radius {
-  border-radius: var(--padding);
-  overflow: hidden;
+
+/* Style Elements */
+.bg-image {
+  background-image: url();
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  min-height: 33vh;
+}
+
+.footer {
+  background-color: var(--contrast);
+  align-items: start;
 }
 
 .shadow {
@@ -510,83 +511,17 @@ center {
   box-shadow: var(--shadow-deep);
 }
 
-.footer {
-  background-color: var(--contrast);
-  align-items: start;
+
+.padding {
+  padding: var(--padding);
 }
 
-  .bg-image {
-	/*	background-image: url('./images/bg-desktop.svg'); */
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: 50% 70%;
-  }
-
-  .button {
-	display: flex;
-	justify-content: center;
-	margin-inline-start:auto;
-	background-color: var(--main-bg-color);
-	width: 2.5em;
-	height: 2.5em;
-	border-radius: 50%;
-	overflow: hidden;
-	cursor: pointer;
-  }
-
-  .button img {
-	align-self: center;
-	width: 1.25em;
-	height: 1.25em;
-	background-color: var(--main-bg-color);
-	padding: 0.25em;
-  }
+.radius {
+  border-radius: var(--radius);
+  overflow: hidden;
+}
 
 
-  .center {
-	text-align: center;
-  }
-
-  .padding {
-	padding: var(--padding);
-  }
-
-  .gap {
-	gap: var(--gap);
-  }
-
-  .shadow {
-	box-shadow: var(--shadow);
-  }
-
-  .shadow:hover {
-	box-shadow: var(--shadow-deep);
-  }
-
-
-  .radius {
-	border-radius: var(--radius);
-	overflow: hidden;
-  }
-
-   .flex {
-	display: flex;
-	flex-wrap: wrap;
-  }
-
-  .flex-column {
-	display: flex;
-	flex-direction: column;
-  }
-
-   .flex-column {
-	display: flex;
-	flex-direction: column;
-  }
-
-  /* A elements that don't have a class get default styles */
-  a:not([class]) {
-	text-decoration-skip-ink: auto;
-  }
-
+***************************************************************************
+***************************************************************************
 
