@@ -15,11 +15,11 @@
 <a href="#main" class="img"><img src="./images/logo.svg" alt="Company Logo"></a>
 <!--  <span>LOGO</span> -->
 </li>
-<li role="menuitem"><a href="">Integrations</a></li>
-<li role="menuitem" class="active"><a href="">Pricing</a></li>
-<li role="menuitem"><a href="">Blog</a></li>
-<li role="menuitem"><a href="">About</a></li>
-<li role="menuitem"><a href="">Sign In</a></li>
+<li role="menuitem"><a href="">  </a></li>
+<li role="menuitem" class="active"><a href="">  </a></li>
+<li role="menuitem"><a href="">   </a></li>
+<li role="menuitem"><a href="">   </a></li>
+<li role="menuitem"><a href="">   </a></li>
 </ul>
 </nav>
 </div>
@@ -248,6 +248,7 @@ p {
 
 a {
   text-decoration:none;
+  color: var(--text);
 }
 
 a:visited, a:active {
@@ -374,6 +375,7 @@ hr {
   min-height:33vh;
   min-width: 300px;
 }
+
 
 /* Grid */
 .grid {
@@ -524,6 +526,8 @@ hr {
 }
 
 
-***************************************************************************
-***************************************************************************
+/* **************************************************************************
+*************************************************************************** */
+
+/* Site specific */
 
