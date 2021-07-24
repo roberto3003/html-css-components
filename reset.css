@@ -116,6 +116,13 @@
 	list-style: none;
   }
 
+  /* Inherit fonts for inputs and buttons */
+  input,
+  button,
+  textarea,
+  select {
+	font: inherit;
+  }
 
   /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
   @media (prefers-reduced-motion: reduce) {
@@ -169,6 +176,19 @@ main, .footer {
   margin-block-start: calc(var(--line-h)*4);
 }
 
+section, .section  {
+  margin-block-end: calc(var(--line-h)*4);
+}
+
+
+
+  /* Make images easier to work with */
+  img,
+  picture {
+	max-width: 100%;
+	display: block;
+  }
+
 /* Set core root defaults */
   html:focus-within {
 	scroll-behavior: smooth;
@@ -219,70 +239,136 @@ p {
   word-spacing: var(--letter-spacing);
 }
 
+a {
+  text-decoration:none;
+}
 
-***************************************************************************
-***************************************************************************
+a:visited, a:active {
+  color: inherit;
+}
 
 
-p {
-  line-height: 1.5;
-  max-width: 60em;
+p a {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-thickness: from-font;
+  cursor: pointer;
+}
+
+p a:visited {
+  color: var(--text-70);
+}
+
+p a:hover {
+  text-decoration: underline;
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: initial;
+}
+
+header {
+  background-color: var(--theme);
+  min-height: calc(var(--line-h)*3);
 }
 
 nav {
   justify-content: flex-end;
 }
 
-
-hr {
-  margin-block-end: calc(var(--padding)*3);
-  border:unset;
+nav li {
+  display: grid;
+  place-items: center;
+  padding: 0.5em;
 }
 
+nav li:not(.logo, .button, .active):hover, .active {
+  border-block-end: solid var(--accent);
+}
 
-input {
-  font: inherit;
+nav .active {
+  font-size: 1.1em;
+}
+
+ul {
+  padding: 0;
 }
 
 input:not(:placeholder-shown):invalid {
   border: 0.1em solid red;
 }
 
-:focus {
-  outline: 3px solid black;
+hr {
+  margin-block-end: calc(var(--line-h)*3);
+  border:unset;
 }
 
-.bg-image {
-  background-image: url();
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  min-height: 33vh;
+.cont {
+  width: 80vw; 
+  min-width: 320px;
+  margin: 0 auto;
 }
 
-.hero {
-  min-width: 300px;
+.skip-main {
+  position: absolute;
+  top: 0;
+  right: 100%;
+}
+
+.skip-main:focus {
+  right: auto;
+}
+
+
+.main-nav {
+  min-height: calc(var(--line-h)*2);
+  align-items: center;
+  gap: 0;
 }
 
 .logo {
   margin-inline-end: auto;
 }
 
-.wrapper {
-  min-height: 100vh;
+.logo .img {
+  height: var(--line-h);
 }
 
-footer .wrapper {
-  min-height: initial;
+.logo .img img {
+  height: 100%;
 }
 
-.container {
-  width: 80vw; 
-  min-width: 320px;
-  padding: var(--padding) 0;
-  margin: 0 auto;
+.main-nav .links {
+  gap: 1em;
+  justify-content: flex-end;
 }
 
+
+@media only screen and (max-width: 25em) {
+  .main-nav  .links  {
+	flex-direction: column;
+	align-items: center;
+  }
+  .logo {
+	margin-inline: auto;
+  }
+}
+
+
+.main-nav .links > *:not(.logo) {
+  display: initial;
+}
+
+
+.hero {
+	background-image: url('./images/hero-desktop.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	min-height:33vh;
+	min-width: 300px;
+  }
+
+/* Grid */
 .grid {
   display: grid;
   grid-template-columns: repeat(
@@ -292,14 +378,9 @@ footer .wrapper {
   gap: var(--gap);
 }
 
-img,
-picture {
-  max-width: 100%;
-  display: block;
-}
 
 
-
+/* Flex Box */
 .flex {
   display: flex;
   gap: var(--gap);
@@ -338,7 +419,16 @@ picture {
   flex-wrap: wrap-reverse;
 }
 
-.center {
+
+/* Centering */
+..flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+center {
   text-align: center;
 }
 
@@ -347,17 +437,38 @@ picture {
   margin-inline-end: auto;
 }
 
-.flex-center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.gc {
+  display: grid;
+  place-items: center;
+}
+
+.gac {
+  display: grid;
   align-items: center;
 }
 
-section, .section  {
-  margin-block-end: calc(var(--padding)*6);
+.gjc {
+  display: grid;
+  justify-items: center;
 }
 
+
+
+
+
+
+
+***************************************************************************
+***************************************************************************
+
+
+.bg-image {
+  background-image: url();
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  min-height: 33vh;
+}
 
 .button {
   border-radius: var(--padding);
@@ -391,15 +502,6 @@ section, .section  {
   overflow: hidden;
 }
 
-
-a {
-  text-decoration:none;
-}
-
-a:visited {
-  color: inherit;
-}
-
 .shadow {
   box-shadow: var(--shadow);
 }
@@ -413,88 +515,11 @@ a:visited {
   align-items: start;
 }
 
-modern CSS reset
-https://piccalil.li/blog/a-modern-css-reset
-
-  /* Inherit fonts for inputs and buttons */
-  input,
-  button,
-  textarea,
-  select {
-	font: inherit;
-  }
-
-
-  /* Set core body defaults */
-  html {
-	background-color: var(--html-color);
-  }
-
-  body {
-	min-height: 100vh;
-	max-width: 100vw;
-	text-rendering: optimizeSpeed;
-	font-family: system-ui;
-	font-size: clamp(1rem, 1.5vw,  30px) ;
-	color: var(--text-light);
-	letter-spacing: 0.25em;
-	background-color: var(--main-bg-color);
-	/*	background-image: var(--bg-image);*/
-	display: flex;
-	flex-direction: column;
-	align-content: space-between;
-  }
-
-  h1 {
-	font-size:clamp(2.5rem, 5vw,  80px);
-  }
-
-  h2 {
-	font-size:clamp(2rem, 3vw,  50px);
-  }
-
-  p {
-	line-height: 1.5;
-  }
-
-  .wrapper {
-	min-height: 100vh;
-	display:flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;	
-  }
-
-  footer .wrapper {
-	min-height: unset;
-  }
-
-  .container {	
-	display: grid;
-	width: clamp(320px, 90vw, 80em);
-  }
-
-  .container > * {
-	padding: var(--padding);
-  }
-
   .bg-image {
 	/*	background-image: url('./images/bg-desktop.svg'); */
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 50% 70%;
-  }
-
-  .link  {
-	cursor:pointer;
-	background-color: var(--accent);
-	text-decoration: none;
-	padding: calc(var(--padding)/2) var(--padding); 
-	border-radius: calc(var(--radius)/2);
-  }
-
-  .link:hover {
-	box-shadow: var(--shadow-deep);
   }
 
   .button {
@@ -544,16 +569,7 @@ https://piccalil.li/blog/a-modern-css-reset
 	overflow: hidden;
   }
 
-  .responsive {
-	display: grid;
-	max-width: 100%;
-	grid-template-columns: repeat(
-	auto-fit,
-	minmax(10em, 1fr));
-	gap: var(--gap);
-  }
-
-  .flex {
+   .flex {
 	display: flex;
 	flex-wrap: wrap;
   }
@@ -563,50 +579,9 @@ https://piccalil.li/blog/a-modern-css-reset
 	flex-direction: column;
   }
 
-  .flex {
-	display: flex;
-  }
-
-  .flex-column {
+   .flex-column {
 	display: flex;
 	flex-direction: column;
-  }
-
-  .flex-hero  {
-	margin-block-start: var(--padding);
-	display: flex;
-	flex-direction: row-reverse;
-	flex-wrap: wrap;
-	width: clamp(320px, 90vw, 60em);
-	background-color: var(--light);
-  }
-
-  .hero {
-	flex-basis: 5em;
-	background-image: url('./images/hero-desktop.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	min-height:33vh;
-	min-width: 300px;
-  }
-
-  article {
-	flex-basis: 5em;
-	max-width: 100%;
-	min-height:33vh;
-	background-color: RGBa(255, 255, 255, 0.7);
-  }
-
-  article > * {
-	margin-block-end: var(--mbe);
-  }
-
-  .card {
-	display: grid;
-	padding: calc(var(--padding)*2);
-	border-radius: var(--radius);
-	overflow: hidden;
   }
 
   /* A elements that don't have a class get default styles */
@@ -614,10 +589,4 @@ https://piccalil.li/blog/a-modern-css-reset
 	text-decoration-skip-ink: auto;
   }
 
-  /* Make images easier to work with */
-  img,
-  picture {
-	max-width: 100%;
-	display: block;
-  }
 
