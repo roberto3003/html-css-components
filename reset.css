@@ -6,7 +6,7 @@
 
 <body>
 
-<header class="gc">
+<header class="header gc">
 <div class="container gac">
 <a class="skip-main" href="#main">Skip to main content</a>
 <nav aria-label="main" class="main-nav">
@@ -102,13 +102,14 @@
 	margin: 0;
   }
 
-  /* Set line height */
+  /* Set line height & brake world */
   h1,
   h2,
   h3,
   h4,
   p {
 	line-height: var(--line-h);
+	word-break: break-word;
   }
 
   /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -272,10 +273,6 @@ p a:hover {
   text-decoration-thickness: initial;
 }
 
-header {
-  background-color: var(--theme);
-  min-height: calc(var(--line-h)*3);
-}
 
 nav {
   justify-content: flex-end;
@@ -324,6 +321,10 @@ hr {
   right: auto;
 }
 
+.header {
+  background-color: var(--theme);
+  min-height: calc(var(--line-h)*3);
+}
 
 .main-nav {
   min-height: calc(var(--line-h)*2);
@@ -461,6 +462,7 @@ hr {
 
 
 /* Buttons and CTA */
+/* <div class="button cta"><a href="">Start for Free</a></div> */
 .button {
   border-radius: var(--padding);
   border: 0.1em  solid var(--text);
