@@ -308,8 +308,8 @@ hr {
   border:unset;
 }
 
-.cont {
-  width: 80vw; 
+.container {
+  width: 80%; 
   min-width: 320px;
   margin: 0 auto;
 }
