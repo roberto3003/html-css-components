@@ -37,29 +37,20 @@
 
 </body>
 
-
-
-.skip-main {
-position: absolute;
-left: -999px;
-}
-
-.skip-main:focus {
-  left: 1em;
-}
-
 :root {
+  --line-h: 1.5em;
   --padding: 1.5em;
-  --gap: 4em;
-  --font-size: clamp(1rem, 1.25vw, 2.5rem);
-  --letter-spacing: 0.3em;
-  --nav-icon: 3em;
+  --gap: calc(var(--line-h)*2);
+  --radius: 1rem;
+  --font-size: clamp(0.8rem, 1.25vw, 2.5rem);
+  --letter-spacing: 0.25em;
 }
 
 /* dark-theme colors */
 :root {
   --bg-color: midnightblue;
-  --text: var(--white);
+  --text:rgba(255, 255, 255, 1);
+  --text-70:rgba(255, 255, 255, 0.7);
   --text-contrast: var(--black);
   --theme: lightsteelblue;
   --contrast: rebeccapurple;
@@ -74,13 +65,14 @@ left: -999px;
 
 /* light-theme colors */
 :root {
-  --bg-color: floralwhite;
-  --text: var(--black);
+  --bg-color: whitesmoke;
+  --text: rgba(46, 49, 49, 1);
+  --text-70: rgba(46, 49, 49, 0.7);
   --text-contrast: var(--white);
-  --theme: var(--white);
+  --theme: mistyrose;
   --medium: lavender;
   --contrast: lightsteelblue;
-  --accent: slateblue;
+  --accent: orangered;
   --white: white;
   --black: rgba(46, 49, 49, 1);
   --shadow: 0 0.25vw 1vw  0 rgba(0,0,0,0.2);
@@ -88,19 +80,148 @@ left: -999px;
 }
 
 
+/* Box sizing rules */
+*,
+  *::before,
+  *::after {
+	box-sizing: border-box;
+  }
+
+  /* Remove default margin and */
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd {
+	margin: 0;
+  }
+
+  /* Set line height */
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+	line-height: var(--line-h);
+  }
+
+  /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+  ul[role='list'],
+  ol[role='list'] {
+	list-style: none;
+  }
+
+
+  /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+  @media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+	  scroll-behavior: auto;
+	}
+
+		 *,
+		   *::before,
+		   *::after {
+			 animation-duration: 0.01ms !important;
+			 animation-iteration-count: 1 !important;
+			 transition-duration: 0.01ms !important;
+			 scroll-behavior: auto !important;
+		   }
+		 }
+
+/* Prepare document for printing */
+  @media print {
+	body > *:not(main), .button {
+	  display: none;
+	}
+  }
+
+/* Make links accesible */
+  :focus {
+	outline: 0.12em solid currentColor;
+	padding: 0.2em;
+	font-size: 1.1em;
+	text-decoration: none;
+	box-shadow: var(--shadow);
+  }
+
+/* Vertical rhythm */
+  main * + * {
+	margin-block-start: var(--line-h);
+  }
+  li, dt, dd, br, th, td {
+	margin-block-start: 0;
+  }
+
+* + h2, * + h3, * + h4 {
+  margin-block-start: var(--line-h);
+}
+
+main * + *:not(p) {
+  margin-block-start: calc(var(--line-h)*2);
+}
+
+main, .footer {
+  margin-block-start: calc(var(--line-h)*4);
+}
+
+/* Set core root defaults */
+  html:focus-within {
+	scroll-behavior: smooth;
+  }
+
 html {
   background-color: var(--bg-color);
 }
 
 
-body {
-  height: 100%;
-  margin:0;
-  color: var(--text);
-  font-family: system-ui, sans-serif;
-  font-size: var(--font-size);
-  letter-spacing: var(--letter-spacing);
-} 
+  body {
+	min-height: 100vh;
+	margin:0;
+	color: var(--text);
+	font-family: system-ui, sans-serif;
+	font-size: var(--font-size);
+	letter-spacing: var(--letter-spacing);
+  } 
+
+body > * {
+  width: 100%;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.25em;
+}
+
+h1, h2, h3, h4 {
+  margin-block-start: 2em;
+  margin-block-end: 1em;
+}
+
+p {
+  max-width: 60em;
+  margin: var(--line-h) 0;
+  word-spacing: var(--letter-spacing);
+}
+
+
+***************************************************************************
+***************************************************************************
 
 
 p {
@@ -294,39 +415,6 @@ a:visited {
 
 modern CSS reset
 https://piccalil.li/blog/a-modern-css-reset
-
-/* Box sizing rules */
-*,
-  *::before,
-  *::after {
-	box-sizing: border-box;
-  }
-
-  /* Remove default margin */
-  body,
-  h1,
-  h2,
-  h3,
-  h4,
-  p,
-  figure,
-  blockquote,
-  dl,
-  dd {
-	margin: 0;
-  }
-
-  /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-  ul[role='list'],
-  ol[role='list'] {
-	list-style: none;
-  }
-
-  /* Set core root defaults */
-  html:focus-within {
-	scroll-behavior: smooth;
-  }
-
 
   /* Inherit fonts for inputs and buttons */
   input,
@@ -532,20 +620,4 @@ https://piccalil.li/blog/a-modern-css-reset
 	max-width: 100%;
 	display: block;
   }
-
-  /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-  @media (prefers-reduced-motion: reduce) {
-	html:focus-within {
-	  scroll-behavior: auto;
-	}
-
-		 *,
-		   *::before,
-		   *::after {
-			 animation-duration: 0.01ms !important;
-			 animation-iteration-count: 1 !important;
-			 transition-duration: 0.01ms !important;
-			 scroll-behavior: auto !important;
-		   }
-		 }
 
