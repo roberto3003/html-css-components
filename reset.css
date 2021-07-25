@@ -327,6 +327,7 @@ hr {
 
 .logo {
   margin-inline-end: auto;
+  padding-inline-start: 0;
 }
 
 .logo .img {
@@ -479,6 +480,7 @@ hr {
 
 .cta:hover {
   background-color: var(--text);
+  border-color: transparent;
 }
 
 .cta a, .cta a:visited {
