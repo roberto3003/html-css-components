@@ -179,15 +179,6 @@ main * + *:not(p) {
   margin-block-start: calc(var(--line-h)*2);
 }
 
-main, .footer {
-  margin-block-start: calc(var(--line-h)*4);
-}
-
-section, .section  {
-  margin-block-end: calc(var(--line-h)*4);
-}
-
-
 
 /* Make images easier to work with */
 img,
