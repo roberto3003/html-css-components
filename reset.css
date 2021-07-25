@@ -175,10 +175,11 @@
   margin-block-start: var(--line-h);
 }
 
+/*
 main * + *:not(p) {
   margin-block-start: calc(var(--line-h)*2);
 }
-
+*/
 
 /* Make images easier to work with */
 img,
