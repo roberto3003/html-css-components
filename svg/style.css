@@ -1,0 +1,9 @@
+body {
+  display: flex;
+  gap: 1em;
+}
+
+.svg {
+  height: 3em;
+  width: auto;
+}

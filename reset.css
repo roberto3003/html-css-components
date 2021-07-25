@@ -286,6 +286,7 @@ nav .active {
 
 ul {
   padding: 0;
+  list-style-type: none;
 }
 
 input:not(:placeholder-shown):invalid {
@@ -491,7 +492,7 @@ hr {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  min-height: 33vh;
+  min-height: 50vh;
 }
 
 .footer {
