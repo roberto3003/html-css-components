@@ -86,6 +86,7 @@
   *::before,
   *::after {
 	box-sizing: border-box;
+	margin-block: 0;
   }
 
   /* Remove default margin and */
@@ -172,20 +173,11 @@
 		 main > *:not(p) {
 		   margin-block: calc(var(--line-h)*2);
 		 }
-		 li, dt, dd, br, th, td {
-		   margin-block-start: 0;
-		 }
-
+		
 * + h2, * + h3, * + h4 {
   margin-block-start: var(--line-h);
 }
 
-
-/*
-main * + *:not(p) {
-  margin-block-start: calc(var(--line-h)*2);
-}
-*/
 
 /* Make images easier to work with */
 img,
@@ -547,10 +539,6 @@ hr {
 
 .socials svg:hover, .links svg:hover:not(.main-page) {
   fill: var(--accent);
-}
-
-.card > * {
-  margin-block: 0;
 }
 
 /* **************************************************************************
