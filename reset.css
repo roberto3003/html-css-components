@@ -15,11 +15,10 @@
 <a href="#main" class="img"><img src="./images/logo.svg" alt="Company Logo"></a>
 <!--  <span>LOGO</span> -->
 </li>
-<li role="menuitem"><a href="">  </a></li>
-<li role="menuitem" class="active"><a href="">  </a></li>
-<li role="menuitem"><a href="">   </a></li>
-<li role="menuitem"><a href="">   </a></li>
-<li role="menuitem"><a href="">   </a></li>
+<li role="menuitem"><a href=""></a></li>
+<li role="menuitem" class="active"><a href=""></a></li>
+<li role="menuitem"><a href=""></a></li>
+<li role="menuitem" class="button"><a href=""></a></li>
 </ul>
 </nav>
 </div>
@@ -29,6 +28,36 @@
 <div class="container center">
 </div>
 </main>
+
+
+<footer class="footer">
+  <div class="container grid">
+	<div class="brand">
+	  <div class="logo">
+		<div class="img">
+		  <img src="./images/logo.svg" alt="Company Logo">
+		</div>
+	  </div>
+	  <ul class="socials flex">
+	
+	  </ul>
+	</div>
+	<ul class="list1">
+	  <li><a href=""></a></li>
+	  <li><a href=""></a></li>
+	  <li><a href=""></a></li>
+	</ul>
+	<ul class="list2">
+	  <li><a href=""></a></li>
+	  <li><a href=""></a></li>
+	  <li><a href=""></a></li>
+	</ul>
+
+	<div class="right">
+	  <div class="button"><a href=""></a></div>
+	  <small>© . All Rights Reserved</small>
+	</div>
+</footer>
 
 <footer class="footer">
 <div class="container">
