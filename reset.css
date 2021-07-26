@@ -321,7 +321,6 @@ hr {
 }
 
 .main-nav {
-  min-height: calc(var(--line-h)*2);
   align-items: center;
   gap: 0;
 }
@@ -341,7 +340,9 @@ hr {
 
 .main-nav .links {
   gap: 1em;
+  align-items: center;
   justify-content: flex-end;
+  min-height: calc(var(--line-h)*3);
 }
 
 
@@ -366,7 +367,7 @@ hr {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  min-height:33vh;
+  min-height: calc(var(--line-h)*20);
   min-width: 300px;
 }
 
@@ -495,7 +496,7 @@ hr {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  min-height: 50vh;
+  min-height: calc(var(--line-h)*20);
 }
 
 .footer {
@@ -521,9 +522,10 @@ hr {
   overflow: hidden;
 }
 
-.social svg:hover {
+.social svg:hover, .links svg:hover:not(.main-page) {
   fill: var(--accent);
 }
+
 
 /* **************************************************************************
 *************************************************************************** */
