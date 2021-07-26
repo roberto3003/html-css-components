@@ -535,13 +535,26 @@ hr {
   overflow: hidden;
 }
 
-.social svg:hover, .links svg:hover:not(.main-page) {
+  .socials {
+	gap: 1em;
+  }
+ 
+  .socials li {
+	height: calc(var(--line-h)*1);
+	width: calc(var(--line-h)*1);
+  }
+
+
+.socials svg:hover, .links svg:hover:not(.main-page) {
   fill: var(--accent);
 }
 
+.card > * {
+  margin-block: 0;
+}
 
 /* **************************************************************************
-*************************************************************************** */
+ *************************************************************************** */
 
 /* Site specific */
 
