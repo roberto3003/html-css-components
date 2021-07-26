@@ -164,8 +164,13 @@
 		 }
 
 		 /* Vertical rhythm */
-		 main * + * {
-		   margin-block-start: var(--line-h);
+
+		 main {
+		   margin-block: calc(var(--line-h)*4);
+		 }
+
+		 main > *:not(p) {
+		   margin-block: calc(var(--line-h)*2);
 		 }
 		 li, dt, dd, br, th, td {
 		   margin-block-start: 0;
@@ -174,6 +179,7 @@
 * + h2, * + h3, * + h4 {
   margin-block-start: var(--line-h);
 }
+
 
 /*
 main * + *:not(p) {
@@ -476,6 +482,7 @@ hr {
 }
 
 .cta {
+  margin-block: calc(var(--line-h)*2);
   background-color: var(--accent);
   border: 0.1em  solid var(--accent);
 }
