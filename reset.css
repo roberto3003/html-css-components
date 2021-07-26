@@ -209,6 +209,11 @@ body > * {
   width: 100%;
 }
 
+header, .footer {
+  padding-block: var(--line-h);
+}
+
+
 h1 {
   font-size: 2.5em;
 }
@@ -340,7 +345,6 @@ hr {
   gap: 1em;
   align-items: center;
   justify-content: flex-end;
-  min-height: calc(var(--line-h)*3);
 }
 
 .main-nav .button {
@@ -378,11 +382,19 @@ hr {
   display: grid;
   grid-template-columns: repeat(
   auto-fill,
-  minmax(16em, 1fr)
+  minmax(12em, 1fr)
   );
   gap: var(--gap);
 }
 
+@media only screen and (max-width: 60em) {
+  .grid {
+	grid-template-columns: repeat(
+	auto-fill,
+	minmax(18em, 1fr)
+	);
+  }
+}
 
 
 /* Flex Box */
@@ -494,6 +506,23 @@ hr {
   color: var(--text-contrast);
 }
 
+/* Cards */
+/* <div class="cards grid">
+	<div class="card card-1"> */
+.card  .h3, .h4 {
+	display: grid;
+	align-items: start;
+	min-height: calc(var(--line-h)*3);
+  }
+
+  .card p {
+	margin-block-start: 0;
+  }
+
+  .card .bg-image {
+	min-height: calc(var(--line-h)*15);
+  }
+
 
 /* Style Elements */
 .bg-image {
@@ -536,6 +565,9 @@ hr {
 	width: calc(var(--line-h)*1);
   }
 
+.footer .logo {
+  padding-block-end: var(--line-h);
+}
 
 .socials svg:hover, .links svg:hover:not(.main-page) {
   fill: var(--accent);
