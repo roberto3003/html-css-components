@@ -395,7 +395,6 @@ hr {
   display: flex;
   gap: var(--gap);
   flex-wrap: wrap;
-  align-items: baseline;
 }
 
 .column {
