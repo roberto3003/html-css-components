@@ -567,6 +567,15 @@ hr {
 	min-height: calc(var(--line-h)*15);
   }
 
+.img-round {
+    height: calc(var(--line-h)*2);
+    background-color: var(--medium);
+    width: calc(var(--line-h)*2);
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+  }
 
 /* Style Elements */
 .bg-image {
