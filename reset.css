@@ -627,6 +627,10 @@ hr {
 	padding-block-end: var(--line-h);
   }
 
+  .footer a:hover {
+	color: var(--accent);
+  }
+
   .socials svg:hover, .links svg:hover:not(.main-page) {
 	fill: var(--accent);
   }
