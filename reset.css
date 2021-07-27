@@ -55,7 +55,7 @@
 
 	<div class="right">
 	  <div class="button"><a href=""></a></div>
-	  <small>© . All Rights Reserved</small>
+	  <small>© Easybank. All Rights Reserved</small>
 	</div>
 </footer>
 
@@ -515,6 +515,11 @@ hr {
   margin: 0 auto;
 }
 
+.button > * {
+  padding: 0;
+  margin: 0;
+}
+
 .button:hover {
   border: 0.1em  solid var(--accent);
   color: var(--accent);
@@ -531,7 +536,7 @@ hr {
   border-color: transparent;
 }
 
-.cta a, .cta a:visited {
+.cta a, .cta a:visited, .cta p {
   color: var(--text-contrast);
 }
 
