@@ -405,10 +405,17 @@ hr {
   min-width: 300px;
 }
 
-
 /* Grid */
 .grid {
   display: grid;
+}
+
+.grid > * > * {
+  margin-block-start: 0;
+}
+
+
+.responsive {
   grid-template-columns: repeat(
   auto-fill,
   minmax(12em, 1fr)
