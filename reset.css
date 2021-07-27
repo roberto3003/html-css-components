@@ -516,6 +516,7 @@ hr {
 .button {
   display: inline-grid;
   align-items: center;
+  margin-block: calc(var(--line-h)*2);
   padding-inline: 1em;
   border-radius: var(--padding);
   border: 0.1em  solid var(--text);
@@ -536,7 +537,6 @@ hr {
 }
 
 .cta {
-  margin-block: calc(var(--line-h)*2);
   background-color: var(--accent);
   border: 0.1em  solid var(--accent);
 }
