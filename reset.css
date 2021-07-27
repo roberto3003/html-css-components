@@ -433,6 +433,10 @@ hr {
   flex-wrap: wrap;
 }
 
+.flex > * > * {
+  margin-block-start: 0;
+}
+
 .column {
   flex-direction: column;
 }
