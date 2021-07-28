@@ -611,6 +611,7 @@ input {
 }
 
 input[type="email" i] {
+  min-width: 18em;
   padding-inline: var(--line-h);
 }
 
@@ -658,7 +659,7 @@ input:not(:placeholder-shown):invalid {
 	height: calc(var(--line-h)*1);
 	width: calc(var(--line-h)*1);
 	padding: 0;
-	margin-inline: 0.5em;
+	margin: 0.5em;
   }
 
   .footer .grid {
