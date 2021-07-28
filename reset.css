@@ -650,9 +650,11 @@ input:not(:placeholder-shown):invalid {
 	gap: 1em;
   }
  
-  .socials li {
+  .social {
 	height: calc(var(--line-h)*1);
 	width: calc(var(--line-h)*1);
+	padding: 0;
+	margin-inline: 0.5em;
   }
 
   .footer .grid {
@@ -669,7 +671,7 @@ input:not(:placeholder-shown):invalid {
   }
 
 
-  .footer .logo {
+  .footer .logo:not(nav .logo) {
 	padding-block-end: var(--line-h);
   }
 
@@ -680,6 +682,7 @@ input:not(:placeholder-shown):invalid {
   .socials svg:hover, .links svg:hover:not(.main-page) {
 	fill: var(--accent);
   }
+
 
 /* **************************************************************************
  *************************************************************************** */
