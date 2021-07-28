@@ -321,6 +321,12 @@ ul {
   list-style-type: none;
 }
 
+summary {
+  font-weight:bold;
+  cursor: pointer;
+  margin-block: var(--line-h);
+}
+
 input:not(:placeholder-shown):invalid {
   border: 0.1em solid red;
 }
