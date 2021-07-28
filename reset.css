@@ -573,6 +573,7 @@ hr {
 /* Style Summaries */
 .summaries {
   max-width: 30em;
+  margin-block-start: calc(var(--line-h)*2);
 }
 
 .summaries hr {
