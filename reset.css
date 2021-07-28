@@ -195,12 +195,9 @@
 
 		 /* Vertical rhythm */
 
-		 main > * {
-		   margin-block: calc(var(--line-h)*6);
-		 }
 
-		 main {
-		   margin-block: calc(var(--line-h)*6);
+		 body > *, main > * {
+		   margin-block-start: calc(var(--line-h)*6);
 		 }
 		
 * + h2, * + h3, * + h4 {
