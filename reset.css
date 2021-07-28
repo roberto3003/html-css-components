@@ -598,6 +598,10 @@ summary {
   margin-block: var(--line-h);
 }
 
+details p {
+  padding-block-end: var(--line-h);
+}
+
 ::marker {
   color: var(--accent);
 }
