@@ -321,17 +321,6 @@ ul {
   list-style-type: none;
 }
 
-summary {
-  font-weight:bold;
-  cursor: pointer;
-  margin-block: var(--line-h);
-}
-
-::marker {
-  color: var(--accent);
-  font-size: 1.5em;
-}
-
 input:not(:placeholder-shown):invalid {
   border: 0.1em solid red;
 }
@@ -586,6 +575,28 @@ hr {
     border-radius: 50%;
     overflow: hidden;
   }
+
+/* Style Summaries */
+.summaries {
+  max-width: 30em;
+}
+
+.summaries hr {
+  margin: 0;
+  border-style: inset;
+  border-width: 1px;
+  border-color: var(--theme);
+}
+
+summary {
+  cursor: pointer;
+  margin-block: var(--line-h);
+}
+
+::marker {
+  color: var(--accent);
+}
+
 
 /* Style Elements */
 .bg-image {

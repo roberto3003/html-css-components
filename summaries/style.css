@@ -1,0 +1,23 @@
+/* Style Summaries */
+.summaries {
+  max-width: 30em;
+}
+
+.summaries hr {
+  margin: 0;
+  border-style: inset;
+  border-width: 1px;
+  border-color: var(--theme);
+}
+
+summary {
+  cursor: pointer;
+  margin-block: var(--line-h);
+}
+
+::marker {
+  color: var(--accent);
+}
+
+
+
