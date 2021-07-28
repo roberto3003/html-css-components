@@ -327,6 +327,11 @@ summary {
   margin-block: var(--line-h);
 }
 
+::marker {
+  color: var(--accent);
+  font-size: 1.5em;
+}
+
 input:not(:placeholder-shown):invalid {
   border: 0.1em solid red;
 }
