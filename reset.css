@@ -261,7 +261,8 @@ h1, h2, h3, h4 {
 
 p {
   max-width: 60em;
-  margin: var(--line-h) 0;
+  margin: 0;
+  margin-block-start: var(--line-h);
   word-spacing: var(--letter-spacing);
 }
 
@@ -524,7 +525,8 @@ nav .active:not(.footer .active) {
 }
 
 .button:not(input) {
-  margin: calc(var(--line-h)*2) auto;
+  margin-block-start: calc(var(--line-h)*1);
+  margin-inline: auto;
 }
 
 .button > * {
@@ -622,7 +624,7 @@ input:not(:placeholder-shown):invalid {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  min-height: calc(var(--line-h)*20);
+  min-height: calc(var(--line-h)*10);
 }
 
 .footer {
