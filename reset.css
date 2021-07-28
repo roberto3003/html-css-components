@@ -194,9 +194,7 @@
 		 }
 
 		 /* Vertical rhythm */
-
-
-		 body > *, main > * {
+		 body > *:not(header), main > * {
 		   margin-block-start: calc(var(--line-h)*6);
 		 }
 		
@@ -373,7 +371,7 @@ hr {
 }
 
 .main-nav .button {
-  margin-inline: 0;
+  margin: 0;
 }
 
 
@@ -512,14 +510,13 @@ hr {
 .button {
   display: inline-grid;
   align-items: center;
-  margin-block: calc(var(--line-h)*2);
+  margin: calc(var(--line-h)*2) auto;
   padding-inline: 1em;
   border-radius: var(--padding);
   border: 0.1em  solid var(--text);
   min-height: calc(var(--line-h)*1.5);
   text-align: center;
   max-width: 20em;
-  margin: 0 auto;
 }
 
 .button > * {
