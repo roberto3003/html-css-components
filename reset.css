@@ -373,8 +373,8 @@ hr {
   align-items: center;
 }
 
-.flex > * > *:not(p) {
-  margin-block-start: 0;
+.flex:not(.links) {
+  padding-block-start: calc(var(--line-h)*2);
 }
 
 .column {
