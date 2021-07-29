@@ -339,10 +339,9 @@ hr {
   display: grid;
 }
 
-.grid > * > * {
+.grid > * > *:not(p) {
   margin-block-start: 0;
 }
-
 
 .responsive {
   grid-template-columns: repeat(
@@ -374,7 +373,7 @@ hr {
   align-items: center;
 }
 
-.flex > * > * {
+.flex > * > *:not(p) {
   margin-block-start: 0;
 }
 
@@ -449,10 +448,16 @@ hr {
 /* Navigation */
 
 .header {
-  background-color: var(--theme);
+  background-color: var(--bg-color);
   min-height: calc(var(--line-h)*3);
   position: sticky;
   top: 0;
+}
+
+@media only screen and (max-width: 50em) {
+  .header {
+	position: initial;
+  }
 }
 
 .main-nav {
@@ -489,9 +494,7 @@ hr {
 
 
 @media only screen and (max-width: 30em) {
-  .header {
-	position: initial;
-  }
+
   .main-nav  .links  {
 	flex-direction: column;
 	align-items: center;
