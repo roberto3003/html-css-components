@@ -378,7 +378,7 @@ hr {
 .flex-inline {
   display: flex;
   align-items: center;
-
+}
 
 .flex > * > * {
   margin-block-start: 0;
@@ -460,7 +460,6 @@ hr {
 }
 
 .logo {
-  margin-inline-end: auto;
   padding-inline-start: 0;
 }
 
@@ -472,6 +471,10 @@ hr {
 .logo .img img {
   height: 100%;
 }
+
+  .separator {
+	margin-inline-end: auto;
+  }
 
 .main-nav .links {
   gap: 1em;
@@ -489,7 +492,7 @@ hr {
 	flex-direction: column;
 	align-items: center;
   }
-  .logo {
+  .separator {
 	margin-inline: auto;
   }
 }
@@ -515,6 +518,16 @@ nav li:not(.logo, .button, .active):hover, .active {
 nav .active:not(.footer .active) {
   font-size: 1.1em;
 }
+
+nav .cta {
+  background-color: var(--text);
+  border: 0.1em solid var(--text);
+}
+
+nav .cta:hover {
+  background-color: var(--text-70);
+}
+
 
 
 
