@@ -526,7 +526,7 @@ nav li:not(.logo, .button, .active):hover, .active {
 }
 
 nav .active:not(.footer .active) {
-  font-size: 1.1em;
+  font-size: var(--active); 
 }
 
 nav .cta {
@@ -558,6 +558,11 @@ nav .cta:hover {
   margin-block-start: calc(var(--line-h)*1);
   margin-inline: auto;
 }
+
+.button input {
+  margin-inline-start: 1em;
+}
+
 
 .button > * {
   padding: 0;
