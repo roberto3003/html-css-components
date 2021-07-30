@@ -196,13 +196,21 @@
 		 }
 
 		 /* Vertical rhythm */
-		 body > *:not(header), main > * {
-		   margin-block-start: calc(var(--line-h)*6);
+		 body > *:not(header, main), main > * {
+		   margin-block-start: calc(var(--line-h)*2);
+		   padding-block: calc(var(--line-h)*2);
 		 }
-		
-* + h2, * + h3, * + h4 {
-  margin-block-start: var(--line-h);
-}
+
+		 h1, h2, h3, h4 {
+		   margin-block-start: 2em;
+		   margin-block-end: 1em;
+		 }
+
+		 @media only screen and (max-width: 50em) {
+		   body > *:not(header, main), main > * {
+			 margin-block-start: calc(var(--line-h)*0);
+			 padding-block: calc(var(--line-h)*1);
+		   }
 
 
 /* Make images easier to work with */
@@ -235,7 +243,7 @@ body > * {
   width: 100%;
 }
 
-header, .footer {
+.footer {
   padding-block: calc(var(--line-h)/2);
 }
 
@@ -254,11 +262,6 @@ h3 {
 
 h4 {
   font-size: 1em;
-}
-
-h1, h2, h3, h4 {
-  margin-block-start: 2em;
-  margin-block-end: 1em;
 }
 
 p {
@@ -410,6 +413,13 @@ hr {
   flex-wrap: wrap-reverse;
 }
 
+  @media only screen and (max-width: 50em) {
+	.flex, .grid {
+	  gap: var(--gap-min);
+	}
+  }
+
+
 
 /* Centering */
 ..flex-center {
@@ -460,6 +470,7 @@ hr {
 @media only screen and (max-width: 50em) {
   .header {
 	position: initial;
+	padding-block: calc(var(--line-h)*2);
   }
 }
 
