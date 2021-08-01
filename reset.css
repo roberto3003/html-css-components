@@ -406,10 +406,9 @@ hr {
   top: 0;
 }
 
-@media only screen and (max-width: 50em) {
+@media only screen and (max-width: 70em) {
   .header {
 	position: initial;
-	padding-block: calc(var(--line-h)*2);
   }
 }
 
