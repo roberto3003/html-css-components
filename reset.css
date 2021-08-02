@@ -24,6 +24,7 @@
 /* TODOS */
 /* mobile navigation - no underlines */
 /* navigation animations */
+/* Make workflow focusable */
 
 
 :root {
@@ -285,14 +286,14 @@ hr {
   margin: 0 auto;
 }
 
-.skip-main {
+.skip-main, .dropdown-menu input {
   position: absolute;
   top: 0;
-  right: 100%;
+  right: 99999px;
 }
 
-.skip-main:focus {
-  right: auto;
+.skip-main:focus, .dropdown-menu input:focus {
+  position: initial;
 }
 
 .hero {
@@ -486,6 +487,16 @@ hr {
   border-block-end: solid var(--accent);
 }
 
+@media only screen and (max-width: 30em) {
+  .links li:not(.dropdown-menu, .button, .active, .li-icon):hover, .active:not(.logo, .li-icon) {
+  border-block-end: none;
+	color: var(--accent);
+  }
+}
+
+
+
+
 .active svg {
   fill: var(--accent);
 }
@@ -542,7 +553,6 @@ nav .cta {
 nav .cta:hover {
   background-color: var(--text-70);
 }
-
 
 /* Buttons and CTA */
 /* <div class="button cta"><a href="">Start for Free</a></div> */
