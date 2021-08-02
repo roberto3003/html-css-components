@@ -1,0 +1,67 @@
+.dropdown-menu {
+  position: relative
+}
+
+.dropdown-menu input, .dropdown-menu input:focus {
+  appearance: none;
+  outline: none;
+  padding: 0;
+  box-shadow: none;
+  border: none;
+
+}
+
+.dropdown-menu label {
+  cursor: pointer;
+  justify-content: space-around;
+  padding-inline: 2em;
+}
+
+.arrow {
+  padding-inline-start: 1em;
+}
+
+.arrow::after {
+content: "▾";
+color: var(--accent);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: var(--line-h);
+  padding-block: calc(var(--line-h)/2);
+}
+
+.dropdown-content a:hover {
+  color: var(--accent);
+}
+
+.dropdown-content a:not(:first-child) {
+  display: block;
+  margin-block-start: 1em;
+  text-align: center;
+}
+
+
+.dropdown-menu input:checked ~ * {
+  display: block;
+  text-align: center;
+}
+
+
+.dropdown-menu input:checked ~ .dropdown-content {
+  background-color: var(--theme);
+  padding-inline: 1em;
+  padding-block: var(--line-h);
+}
+
+.dropdown-menu input:checked ~ label .arrow::after {
+content: "▴"
+}
+
+
+@media only screen and (max-width: 30em) {
+.dropdown-menu input:checked ~ .dropdown-content {
+  position: initial;
+}
