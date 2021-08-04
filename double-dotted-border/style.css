@@ -1,0 +1,22 @@
+.container {
+  position: relative;
+  padding: 75px 0 100px;
+  background-image: linear-gradient(90deg,#000 50%,transparent 0),linear-gradient(90deg,#000 50%,transparent 0),linear-gradient(90deg,#000 50%,transparent 0),linear-gradient(90deg,#000 50%,transparent 0);
+  background-position: 0 0,0 100%,left 14px,0 calc(100% - 14px);
+  background-repeat: repeat-x,repeat-x,repeat-x,repeat-x;
+  background-size: 24px 1px,24px 1px,24px 1px,24px 1px;
+  animation: .8s infinite normal c;
+  animation-timing-function: linear;
+  animation-play-state: running;
+  /* animation-play-state: paused; */
+}
+
+@keyframes c {
+  0% {
+	background-position-x: 0,0;
+  }
+
+  100% {
+	background-position-x: 24px,-24px;
+  }
+}
