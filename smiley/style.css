@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.rotated {
+  transform: rotateZ(180deg);
+  animation-delay: .5s;
+}
+
+.smiley {
+  width: 177px;
+  height: 180px;
+  animation: 1s infinite alternate d;
+  animation-timing-function: ease-in-out;
+}  
+
+@keyframes d {
+  0% {
+	transform: translateY(10%);
+  }
+  100% {
+	transform: translateY(-10%);
+  }
+}
+
