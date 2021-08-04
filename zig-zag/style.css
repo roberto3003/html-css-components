@@ -1,0 +1,18 @@
+.container {
+  padding: 50px 0 0;
+  background-image: repeating-linear-gradient(-45deg,#000,#000 1px,transparent 0,transparent 71px),repeating-linear-gradient(45deg,#000,#000 1px,transparent 0,transparent 70px);
+  background-position: 0 0,0 0;
+  background-size: 100px 50px,100px 50px;
+  background-repeat: repeat-x;
+  animation: 2s infinite normal g;
+  animation-timing-function: linear;
+}
+
+@keyframes g {
+  0% {
+	background-position-x: 0;
+  }
+  100% {
+	background-position-x: 100px;
+  }
+}
