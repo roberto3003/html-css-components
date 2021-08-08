@@ -1,15 +1,6 @@
 /* 3840 2732  2048 1366 828 */
 
 
-  .hero {
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	aspect-ratio: 3/2;
-  }
-
-
-
 .hero { background-image: url("./images/hero/3840.jpg");}
 .webp .hero { background-image: url('./images/hero/3840.webp'); }
 .avif .hero { background-image: url('./images/hero/3840.avif'); }
@@ -27,6 +18,13 @@
 .webp .hero { background-image: url('./images/hero/2048.webp'); }
 .avif .hero { background-image: url('./images/hero/2048.avif'); }
 }
+
+@media (max-width: 1692px) and (-webkit-max-device-pixel-ratio: 1.5) {
+.hero { background-image: url("./images/hero/1692.jpg");}
+.webp .hero { background-image: url('./images/hero/1692.webp'); }
+.avif .hero { background-image: url('./images/hero/1692.avif'); }
+}
+
 
 @media (max-width: 1366px) and (-webkit-max-device-pixel-ratio: 1.5) {
 .hero { background-image: url("./images/hero/1366.jpg");}
@@ -54,6 +52,13 @@
 .avif .hero { background-image: url('./images/hero/2048.avif'); }
 }
 
+@media (max-width: 846px) and (-webkit-min-device-pixel-ratio: 1.5) {
+.hero { background-image: url("./images/hero/1692.jpg");}
+.webp .hero { background-image: url('./images/hero/1692.webp'); }
+.avif .hero { background-image: url('./images/hero/1692.avif'); }
+}
+
+
 @media (max-width: 683px) and (-webkit-min-device-pixel-ratio: 1.5) {
 .hero { background-image: url("./images/hero/1366.jpg");}
 .webp .hero { background-image: url('./images/hero/1366.webp'); }
@@ -65,6 +70,4 @@
 .webp .hero { background-image: url('./images/hero/828.webp'); }
 .avif .hero { background-image: url('./images/hero/828.avif'); }
 }
-
-
 
