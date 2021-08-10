@@ -1,0 +1,71 @@
+/* 2048 1692 1280 912 742 512  */
+
+@media (-webkit-max-device-pixel-ratio: 1.5) {
+.picture-1 .bg-image {background-image: url("./images/pool/1280.jpg");}
+.webp .picture-1 .bg-image {background-image: url("./images/pool/1280.webp");}
+ .avif .picture-1 .bg-image {background-image: url("./images/pool/1280.avif");}
+}
+
+@media (max-width: 2736px) and (-webkit-max-device-pixel-ratio: 1.5) {
+.picture-1 .bg-image {background-image: url("./images/pool/912.jpg");}
+.webp .picture-1 .bg-image {background-image: url("./images/pool/912.webp");}
+ .avif .picture-1 .bg-image {background-image: url("./images/pool/912.avif");}
+}
+
+@media (max-width: 2226px) and (-webkit-max-device-pixel-ratio: 1.5) {
+.picture-1 .bg-image {background-image: url("./images/pool/742.jpg");}
+.webp .picture-1 .bg-image {background-image: url("./images/pool/742.webp");}
+ .avif .picture-1 .bg-image {background-image: url("./images/pool/742.avif");}
+}
+
+@media (max-width: 1536px) and (-webkit-max-device-pixel-ratio: 1.5) {
+.picture-1 .bg-image {background-image: url("./images/pool/512.jpg");}
+.webp .picture-1 .bg-image {background-image: url("./images/pool/512.webp");}
+ .avif .picture-1 .bg-image {background-image: url("./images/pool/512.avif");}
+}
+
+
+@media (-webkit-min-device-pixel-ratio: 1.5) {
+.picture-1 .bg-image {background-image: url("./images/pool/912.jpg");}
+.webp .picture-1 .bg-image {background-image: url("./images/pool/912.webp");}
+ .avif .picture-1 .bg-image {background-image: url("./images/pool/912.avif");}
+}
+
+@media (max-width: 1113px) and (-webkit-min-device-pixel-ratio: 1.5) {
+.picture-1 .bg-image {background-image: url("./images/pool/742.jpg");}
+.webp .picture-1 .bg-image {background-image: url("./images/pool/742.webp");}
+ .avif .picture-1 .bg-image {background-image: url("./images/pool/742.avif");}
+}
+
+@media (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5) {
+.picture-1 .bg-image {background-image: url("./images/pool/2048.jpg");}
+.webp .picture-1 .bg-image {background-image: url("./images/pool/2048.webp");}
+ .avif .picture-1 .bg-image {background-image: url("./images/pool/2048.avif");}
+}
+
+
+@media (max-width: 846px) and (-webkit-min-device-pixel-ratio: 1.5) {
+.picture-1 .bg-image {background-image: url("./images/pool/1692.jpg");}
+.webp .picture-1 .bg-image {background-image: url("./images/pool/1692.webp");}
+ .avif .picture-1 .bg-image {background-image: url("./images/pool/1692.avif");}
+}
+
+@media (max-width: 640px) and (-webkit-min-device-pixel-ratio: 1.5) {
+.picture-1 .bg-image {background-image: url("./images/pool/1280.jpg");}
+.webp .picture-1 .bg-image {background-image: url("./images/pool/1280.webp");}
+ .avif .picture-1 .bg-image {background-image: url("./images/pool/1280.avif");}
+}
+
+@media (max-width: 456px) and (-webkit-min-device-pixel-ratio: 1.5) {
+.picture-1 .bg-image {background-image: url("./images/pool/912.jpg");}
+.webp .picture-1 .bg-image {background-image: url("./images/pool/912.webp");}
+ .avif .picture-1 .bg-image {background-image: url("./images/pool/912.avif");}
+}
+
+@media (max-width: 371px) and (-webkit-min-device-pixel-ratio: 1.5) {
+.picture-1 .bg-image {background-image: url("./images/pool/742.jpg");}
+.webp .picture-1 .bg-image {background-image: url("./images/pool/742.webp");}
+ .avif .picture-1 .bg-image {background-image: url("./images/pool/742.avif");}
+}
+
+
