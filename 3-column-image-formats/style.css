@@ -1,5 +1,12 @@
 /* 2048 1692 1280 912 742 512  */
 
+@media (max-width: 1024px) {
+  .grid-two, .grid-three {
+	grid-template-columns: 1fr;
+  }
+}
+
+
 @media (-webkit-max-device-pixel-ratio: 1.5) {
 .picture-1 .bg-image {background-image: url("./images/pool/1280.jpg");}
 .webp .picture-1 .bg-image {background-image: url("./images/pool/1280.webp");}
