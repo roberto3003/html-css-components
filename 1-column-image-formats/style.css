@@ -1,0 +1,71 @@
+.hero { background-image: url("./images/hero/3840.jpg");}
+.webp .hero { background-image: url('./images/hero/3840.webp'); }
+.avif .hero { background-image: url('./images/hero/3840.avif'); }
+
+
+
+@media (max-width: 2732px) and (-webkit-max-device-pixel-ratio: 1.5) {
+.hero { background-image: url("./images/hero/2732.jpg");}
+.webp .hero { background-image: url('./images/hero/2732.webp'); }
+.avif .hero { background-image: url('./images/hero/2732.avif'); }
+}
+
+@media (max-width: 2048px) and (-webkit-max-device-pixel-ratio: 1.5) {
+.hero { background-image: url("./images/hero/2048.jpg");}
+.webp .hero { background-image: url('./images/hero/2048.webp'); }
+.avif .hero { background-image: url('./images/hero/2048.avif'); }
+}
+
+@media (max-width: 1692px) and (-webkit-max-device-pixel-ratio: 1.5) {
+.hero { background-image: url("./images/hero/1692.jpg");}
+.webp .hero { background-image: url('./images/hero/1692.webp'); }
+.avif .hero { background-image: url('./images/hero/1692.avif'); }
+}
+
+
+@media (max-width: 1366px) and (-webkit-max-device-pixel-ratio: 1.5) {
+.hero { background-image: url("./images/hero/1366.jpg");}
+.webp .hero { background-image: url('./images/hero/1366.webp'); }
+.avif .hero { background-image: url('./images/hero/1366.avif'); }
+}
+
+@media (max-width: 828px) and (-webkit-max-device-pixel-ratio: 1.5) {
+.hero { background-image: url("./images/hero/828.jpg");}
+.webp .hero { background-image: url('./images/hero/828.webp'); }
+.avif .hero { background-image: url('./images/hero/828.avif'); }
+}
+
+
+
+@media (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+.hero { background-image: url("./images/hero/2732.jpg");}
+.webp .hero { background-image: url('./images/hero/2732.webp'); }
+.avif .hero { background-image: url('./images/hero/2732.avif'); }
+}
+
+@media (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5) {
+.hero { background-image: url("./images/hero/2048.jpg");}
+.webp .hero { background-image: url('./images/hero/2048.webp'); }
+.avif .hero { background-image: url('./images/hero/2048.avif'); }
+}
+
+@media (max-width: 846px) and (-webkit-min-device-pixel-ratio: 1.5) {
+.hero { background-image: url("./images/hero/1692.jpg");}
+.webp .hero { background-image: url('./images/hero/1692.webp'); }
+.avif .hero { background-image: url('./images/hero/1692.avif'); }
+}
+
+
+@media (max-width: 683px) and (-webkit-min-device-pixel-ratio: 1.5) {
+.hero { background-image: url("./images/hero/1366.jpg");}
+.webp .hero { background-image: url('./images/hero/1366.webp'); }
+.avif .hero { background-image: url('./images/hero/1366.avif'); }
+}
+
+@media (max-width: 414px) and (-webkit-min-device-pixel-ratio: 1.5) {
+.hero { background-image: url("./images/hero/828.jpg");}
+.webp .hero { background-image: url('./images/hero/828.webp'); }
+.avif .hero { background-image: url('./images/hero/828.avif'); }
+}
+
+
